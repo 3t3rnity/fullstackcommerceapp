@@ -1,0 +1,2 @@
+export const MENU_STATE = "HEADER/MENU_STATE";
+export const SEARCH_ITEMS = "HEADER/SEARCH_ITEMS";

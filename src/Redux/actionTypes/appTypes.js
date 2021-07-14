@@ -1,0 +1,2 @@
+export const CHANGE_FLAG = 'APP/CHANGE_FLAG'
+export const MODAL_STATE = 'APP/MODAL_STATE'

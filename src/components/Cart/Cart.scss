@@ -1,0 +1,46 @@
+.cart {
+    &-root {
+        padding: 50px;
+        height: 90%;
+        display: flex;
+        justify-content: space-around;
+    }
+    &-list {
+        max-height: 800px;
+        padding: 32px;
+        box-shadow: inset 0px 0px 5px 0px #736F89;
+        width: 60%;
+        box-sizing: border-box;
+        overflow: auto;
+        &__item {
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: inset 0px 0px 5px 0px #736F89;
+            border-radius: 15px;
+            &-button-group {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        
+    }
+    &-sidebar {
+        padding: 50px;
+        height: 30%;
+        box-shadow: inset 0px 0px 5px 0px #736F89;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        &__price {
+            padding: 15px;
+            box-shadow: inset 0px 0px 5px 0px #736F89;
+        }
+        &__button-group {
+            padding: 15px;
+            >button {
+                margin-right: 15px;
+            }
+        }
+    }
+}

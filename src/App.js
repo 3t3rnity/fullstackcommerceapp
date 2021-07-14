@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import MainLayout from './components/Layout/MainLayout/MainLayout'
+import Registration from './components/Registration/Registration'
+import CreateGood from './components/CreateGood/CreateGood'
+import MainPage from './components/MainPage/MainPage'
+import Login from './components/Login/Login'
+import Cart from './components/Cart/Cart'
 
-function App() {
+const Warning = () => (
+  <h1>403 F0rbidden</h1>
+)
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Switch>
+      <MainLayout>
+          <Route path = '/Cart' component = {sessionStorage.getItem("logged") ? Cart : Warning} />
+          <Route path = '/login' component = {Login} />
+          <Route path = '/registration' component = {Registration} />
+          <Route path = '/creategood' component = {CreateGood} />
+          <Route path = '/' component = {MainPage} exact />
+      </MainLayout>
+    </Switch>
+  )
 }
 
-export default App;
+export default App
+
